@@ -1,1 +1,1 @@
-<a href="{{ $href }}" class="hover:underline text-slate-900">{{ $slot }}</a>
+<a href="{{ $href }}" class="hover:underline text-sky-600">{{ $slot }}</a>

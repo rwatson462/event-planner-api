@@ -17,4 +17,5 @@ Route::middleware('auth')->group(function () {
     Route::any('/logout', LogoutController::class)->name('logout');
 
     Route::view('/profile', 'profile')->name('profile');
+    Route::view('/events/create', 'events.create')->name('events.create');
 });

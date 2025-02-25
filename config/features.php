@@ -10,4 +10,7 @@ return [
     'profile' => [
         'enabled' => true,
     ],
+    'events' => [
+        'enabled' => false,
+    ]
 ];
