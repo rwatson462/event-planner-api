@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return 'Log in';
 })->name('login');
+
+Route::get('/sign-up', function () {
+    return 'Sign up';
+})->name('sign-up');

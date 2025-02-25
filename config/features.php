@@ -2,6 +2,9 @@
 
 return [
     'login' => [
-        'enabled' => true,
+        'enabled' => false,
+    ],
+    'sign-up' => [
+        'enabled' => false,
     ],
 ];
