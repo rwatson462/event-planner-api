@@ -5,14 +5,14 @@
     $signUpEnabled = $featureService->isFeatureEnabled('sign-up');
 @endphp
 <header class="p-4 rounded border border-slate-900 dark:border-slate-400 flex justify-between items-center">
-    <h4 class="text-lg font-black">Event Planner</h4>
+    <x-ui.link href="{{ route('welcome') }}"><h4 class="text-lg font-black">Event Planner</h4></x-ui.link>
     <ul>
         @guest
             @if($loginEnabled)
-                <li><a href="{{ route('login') }}">Log in</a></li>
+                <li><x-ui.link href="{{ route('login') }}">Log in</x-ui.link></li>
             @endif
             @if($signUpEnabled)
-                <li><a href="{{ route('sign-up') }}">Sign up</a></li>
+                <li><x-ui.link href="{{ route('sign-up') }}">Sign up</x-ui.link></li>
             @endif
         @endguest
     </ul>

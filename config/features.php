@@ -5,6 +5,6 @@ return [
         'enabled' => false,
     ],
     'sign-up' => [
-        'enabled' => false,
+        'enabled' => true,
     ],
 ];
