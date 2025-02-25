@@ -1,7 +1,7 @@
 @php
     $featureService = app()->make(\App\Features\Services\FeatureEnabledService::class);
 @endphp
-<header class="p-4 rounded-lg rounded-tl-none rounded-tr-none border-t-0 shadow border border-slate-300 dark:border-slate-400 flex justify-between items-center">
+<header class="p-4 rounded-lg rounded-tl-none rounded-tr-none border-t-0 shadow border border-slate-300  flex justify-between items-center">
     <x-ui.link href="{{ route('welcome') }}"><h4 class="text-lg font-black">Event Planner</h4></x-ui.link>
     <ul class="flex gap-x-4 items-center">
         @auth
