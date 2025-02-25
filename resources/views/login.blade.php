@@ -1,7 +1,7 @@
 <x-layout.app>
     <x-ui.page-title title="Log in to your account"/>
 
-    <form method="post" class="space-y-4 max-w-md p-4 border border-slate-400 rounded-lg">
+    <form method="post" class="space-y-4 max-w-md pt-24">
         @csrf
         <x-ui.form.fieldset
             label="Email address"

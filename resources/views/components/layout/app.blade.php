@@ -13,12 +13,14 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-slate-100  text-slate-700 px-6 flex min-h-screen flex-col max-w-4xl mx-auto gap-y-8">
+<body class="bg-slate-100  text-slate-700 px-6 flex min-h-screen flex-col max-w-5xl mx-auto gap-y-8">
 <x-layout.header/>
 
-<main class="flex-grow space-y-4">
-    {{ $slot }}
-</main>
+<div class="flex-grow">
+    <main class="space-y-4 max-w-4xl mx-auto">
+        {{ $slot }}
+    </main>
+</div>
 
 <x-layout.footer/>
 </body>
