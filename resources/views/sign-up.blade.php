@@ -2,6 +2,11 @@
     <x-ui.page-title title="Sign up to sell tickets to your events"/>
 
     <form method="post" class="space-y-4 max-w-md p-4 border rounded-lg">
+        @csrf
+        <x-ui.form.fieldset>
+            <x-ui.form.label for="name" class="w-1/2 text-right">Your name</x-ui.form.label>
+            <x-ui.form.input type="text" name="name" id="name" placeholder="John Doe"/>
+        </x-ui.form.fieldset>
         <x-ui.form.fieldset>
             <x-ui.form.label for="email" class="w-1/2 text-right">Email address</x-ui.form.label>
             <x-ui.form.input type="email" name="email" id="email" placeholder="user@example.com"/>
