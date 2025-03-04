@@ -2,7 +2,7 @@
 
 namespace App\Auth\Adapter\Http\Controllers;
 
-use App\Auth\Adapter\Http\Requests\LoginRequest;
+use App\Auth\Adapter\Http\RequestData\LoginRequestData;
 use App\Features\Services\FeatureEnabledService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -13,23 +13,23 @@ final readonly class LoginController
         private FeatureEnabledService $featureEnabledService,
     ) {}
 
-    public function __invoke(LoginRequest $request): RedirectResponse
+    public function __invoke(LoginRequestData $requestData): RedirectResponse
     {
         $credentials = [
-            ...$request->validated(),
+            ...$requestData->toArray(),
             'active' => true,
         ];
 
-        if (Auth::attempt($credentials)) {
-            if ($this->featureEnabledService->isFeatureEnabled('profile')) {
-                return redirect()->route('profile');
-            } else {
-                return redirect()->route('welcome');
-            }
+        if (! Auth::attempt($credentials)) {
+            return redirect()->back()->withInput()->withErrors([
+                'password' => 'Invalid username/password combination.',
+            ]);
         }
 
-        return redirect()->back()->withInput()->withErrors([
-            'password' => 'Invalid username/password combination',
-        ]);
+        if ($this->featureEnabledService->isFeatureEnabled('profile')) {
+            return redirect()->route('profile');
+        } else {
+            return redirect()->route('welcome');
+        }
     }
 }

@@ -6,4 +6,6 @@
      <div>Some thing with events</div>
    @endfeature
    ```
-2. 
+   
+2. Use Commands and Queries (CQRS) for managing data and events
+3. 

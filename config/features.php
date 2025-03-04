@@ -5,12 +5,12 @@ return [
         'enabled' => true,
     ],
     'sign-up' => [
-        'enabled' => true,
+        'enabled' => false,
     ],
     'profile' => [
         'enabled' => true,
     ],
     'events' => [
-        'enabled' => false,
-    ]
+        'enabled' => true,
+    ],
 ];
