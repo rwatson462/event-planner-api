@@ -13,7 +13,7 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-slate-100  text-slate-700 px-6 flex min-h-screen flex-col max-w-5xl mx-auto gap-y-8">
+<body class="bg-white  text-slate-700 px-6 flex min-h-screen flex-col max-w-5xl mx-auto gap-y-8">
 <x-layout.header/>
 
 <div class="flex-grow">
