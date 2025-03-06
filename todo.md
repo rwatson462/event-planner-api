@@ -6,7 +6,7 @@
      <div>Some thing with events</div>
    @endfeature
    ```
-   
+* [ ] Create Feature blocking middleware, something like `middleware('feature:events')` to attach to routes
 * [ ] Use Commands and Queries (CQRS) for managing data and events
 * [ ] Add simple form builder
 * [ ] Add role to users
