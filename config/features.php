@@ -11,6 +11,6 @@ return [
         'enabled' => true,
     ],
     'events' => [
-        'enabled' => true,
+        'enabled' => false,
     ],
 ];

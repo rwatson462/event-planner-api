@@ -9,14 +9,23 @@
         <fieldset>
             <div class="flex justify-between gap-x-2">
                 <x-ui.form.label for="{{ $property }}" class="w-1/2 text-right">{{ $field['label'] }}</x-ui.form.label>
-                <x-ui.form.input
-                    type="{{ $field['type'] ?? 'text' }}"
-                    name="{{ $property }}"
-                    id="{{ $property }}"
-                    placeholder="{{ $field['placeholder'] ?? '' }}"
-                    value="{{ old($property) }}"
-                    required="{{ $field['required'] ?? false }}"
-                />
+                @if(($field['type'] ?? '') === 'textarea')
+                    <x-ui.form.textarea
+                        name="{{ $property }}"
+                        id="{{ $property }}"
+                        placeholder="{{ $field['placeholder'] ?? '' }}"
+                        required="{{ $field['required'] ?? false }}"
+                    >{{ old($property) }}</x-ui.form.textarea>
+                @else
+                    <x-ui.form.input
+                        type="{{ $field['type'] ?? 'text' }}"
+                        name="{{ $property }}"
+                        id="{{ $property }}"
+                        placeholder="{{ $field['placeholder'] ?? '' }}"
+                        value="{{ old($property) }}"
+                        required="{{ $field['required'] ?? false }}"
+                    />
+                @endif
             </div>
 
             @error($property)
