@@ -14,6 +14,11 @@
                     'type' => 'textarea',
                     'required' => true,
                 ],
+                'date' => [
+                    'label' => 'When is your event?',
+                    'type' => 'datetime-local',
+                    'required' => true,
+                ],
             ],
         ];
     @endphp
