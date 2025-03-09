@@ -12,9 +12,8 @@
                 'description' => [
                     'label' => 'Describe your event',
                     'type' => 'textarea',
-                    'required' => true,
                 ],
-                'date' => [
+                'datetime' => [
                     'label' => 'When is your event?',
                     'type' => 'datetime-local',
                     'required' => true,

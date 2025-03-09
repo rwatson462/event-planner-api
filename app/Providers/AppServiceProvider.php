@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::directive('endfeature', function () {
-            return "<?php endif; ?>";
+            return '<?php endif; ?>';
         });
     }
 }
