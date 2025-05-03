@@ -12,8 +12,8 @@ class CreateEventRequest extends FormRequest
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
             'date' => ['required', 'date'],
-            'startAt' => ['required', 'time'],
-            'endAt' => ['required', 'time'],
+            'startAt' => ['required', 'string'],
+            'endAt' => ['required', 'string'],
         ];
     }
 }

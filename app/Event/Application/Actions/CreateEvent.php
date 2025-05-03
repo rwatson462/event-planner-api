@@ -12,6 +12,7 @@ class CreateEvent
     ) {}
 
     public function handle(
+        int $userId,
         string $name,
         string $description,
         CarbonImmutable $date,
@@ -19,6 +20,7 @@ class CreateEvent
         string $endAt,
     ): void {
         $this->eventRepository->store([
+            'user_id' => $userId,
             'name' => $name,
             'description' => $description,
             'date' => $date->toDateString(),

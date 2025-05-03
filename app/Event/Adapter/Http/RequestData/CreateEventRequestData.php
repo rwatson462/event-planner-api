@@ -12,6 +12,7 @@ final readonly class CreateEventRequestData
     public CarbonImmutable $datetime;
     public string $startAt;
     public string $endAt;
+    public int $userId;
 
     public function __construct(
         CreateEventRequest $request,
@@ -21,5 +22,6 @@ final readonly class CreateEventRequestData
         $this->datetime = CarbonImmutable::parse($request->validated('date'));
         $this->startAt = $request->validated('startAt');
         $this->endAt = $request->validated('endAt');
+        $this->userId = $request->user()->id;
     }
 }

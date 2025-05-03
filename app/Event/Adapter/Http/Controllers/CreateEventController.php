@@ -15,11 +15,14 @@ final readonly class CreateEventController
     public function __invoke(CreateEventRequestData $requestData): RedirectResponse
     {
         $this->createEvent->handle(
+            userId: $requestData->userId,
             name: $requestData->name,
             description: $requestData->description,
             date: $requestData->datetime,
             startAt: $requestData->startAt,
             endAt: $requestData->endAt,
         );
+
+        return redirect()->to('profile');
     }
 }
