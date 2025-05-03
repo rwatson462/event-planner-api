@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Blade::directive('feature', function (string $name) {
-            return "<?php if (app()->make(\App\Features\Services\FeatureEnabledService::class)->isFeatureEnabled($name)): ?>";
+            return "<?php if (app()->make(\App\Features\Application\Services\FeatureEnabledService::class)->isFeatureEnabled($name)): ?>";
         });
 
         Blade::directive('endfeature', function () {

@@ -3,7 +3,7 @@
 namespace App\Auth\Adapter\Http\Controllers;
 
 use App\Auth\Adapter\Http\RequestData\LoginRequestData;
-use App\Features\Services\FeatureEnabledService;
+use App\Features\Application\Services\FeatureEnabledService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
