@@ -8,25 +8,18 @@ use Carbon\CarbonImmutable;
 final readonly class CreateEventRequestData
 {
     public string $name;
-
     public string $description;
-
     public CarbonImmutable $datetime;
+    public string $startAt;
+    public string $endAt;
 
     public function __construct(
         CreateEventRequest $request,
     ) {
         $this->name = $request->validated('name');
         $this->description = $request->validated('description');
-        $this->datetime = CarbonImmutable::parse($request->validated('datetime'));
-    }
-
-    public function toArray(): array
-    {
-        return [
-            'name' => $this->name,
-            'description' => $this->description,
-            'datetime' => $this->datetime->toDateTimeString(),
-        ];
+        $this->datetime = CarbonImmutable::parse($request->validated('date'));
+        $this->startAt = $request->validated('startAt');
+        $this->endAt = $request->validated('endAt');
     }
 }

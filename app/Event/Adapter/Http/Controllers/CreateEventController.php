@@ -17,7 +17,9 @@ final readonly class CreateEventController
         $this->createEvent->handle(
             name: $requestData->name,
             description: $requestData->description,
-            datetime: $requestData->datetime,
+            date: $requestData->datetime,
+            startAt: $requestData->startAt,
+            endAt: $requestData->endAt,
         );
     }
 }
