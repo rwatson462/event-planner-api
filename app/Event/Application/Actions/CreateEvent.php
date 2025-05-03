@@ -14,12 +14,18 @@ class CreateEvent
     public function handle(
         string $name,
         string $description,
-        CarbonImmutable $datetime,
+        CarbonImmutable $date,
+        string $startAt,
+        string $endAt,
     ): void {
         $this->eventRepository->store([
             'name' => $name,
             'description' => $description,
-            'datetime' => $datetime->toDateTimeString(),
+            'date' => $date->toDateString(),
+            'start_at' => $startAt,
+            'end_at' => $endAt,
         ]);
+
+        // todo domain event
     }
 }

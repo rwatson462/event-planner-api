@@ -13,10 +13,18 @@
                     'label' => 'Describe your event',
                     'type' => 'textarea',
                 ],
-                'datetime' => [
+                'date' => [
                     'label' => 'When is your event?',
-                    'type' => 'datetime-local',
+                    'type' => 'date',
                     'required' => true,
+                ],
+                'startAt' => [
+                    'label' => 'What time does it start?',
+                    'type' => 'time',
+                ],
+                'endAt' => [
+                    'label' => 'When does it end?',
+                    'type' => 'time',
                 ],
             ],
         ];

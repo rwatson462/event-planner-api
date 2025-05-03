@@ -25,3 +25,12 @@
     1. guest can view event on public page
     2. add toggle to event to allow public signups
     3. guest can sign up via public page
+* [ ] Share events
+    1. user clicks a share button to show a link that they can pass on to others
+    2. landing page for "shared events" with text along the lines of "so-and-so has shared this with you, click to view"
+    3. track opening of links through visits to the sahred event page
+
+
+Subscription!
+Service is free to use for "simple" events - events with name/desc/start/end
+User can upgrade to "pro" to add ticket numbers, sell tickets, etc
